@@ -3,8 +3,9 @@
   "version": "2.0.0",
   "description": "Offline-first activity planner for Turkish community - Weddings, Funerals, Breakfasts, Musical Events",
   "main": "index.html",
+  
   "window": {
-    "title": "Activity Planner",
+    "title": "Kasanlı Activity Planner",
     "width": 1400,
     "height": 900,
     "min_width": 800,
@@ -19,8 +20,11 @@
   "webkit": {
     "plugin": false
   },
-  "chromium-args": "--disable-web-security --allow-file-access-from-files",
-  "node-remote": "<local>",
+  "chromium-args": "--disable-web-security --allow-file-access-from-files --disable-devtools",
+  "node-remote": [
+    "http://localhost:8080/*",
+    "file://*"
+  ],
   "scripts": {
     "start": "nw .",
     "build:win": "nwbuild -p win64 -o dist/ .",
