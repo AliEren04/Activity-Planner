@@ -1,0 +1,62 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build outputs
+dist/
+build/
+*.app
+*.exe
+*.dmg
+*.deb
+*.rpm
+
+# NW.js cache
+cache/
+.nw/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment files
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Package locks (optional - uncomment if you want to ignore)
+# package-lock.json
+# yarn.lock
+
+# Local libraries (IMPORTANT: Comment these out if you want to commit libs)
+# We typically DO want to commit libs/ for offline-first apps
+# But uncomment if you prefer to download them separately
+# libs/
+# libs/*.js
+# libs/*.css
+# libs/fonts/
+
+# User data (if storing outside of app)
+data/
+backups/
+
+# Test files
+test-results/
+coverage/

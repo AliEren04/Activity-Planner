@@ -1,0 +1,44 @@
+{
+  "name": "activity-planner",
+  "version": "2.0.0",
+  "description": "Offline-first activity planner for Turkish community - Weddings, Funerals, Breakfasts, Musical Events",
+  "main": "index.html",
+  "window": {
+    "title": "Activity Planner",
+    "width": 1400,
+    "height": 900,
+    "min_width": 800,
+    "min_height": 600,
+    "icon": "assets/logo.png",
+    "position": "center",
+    "resizable": true,
+    "toolbar": false,
+    "frame": true,
+    "show": true
+  },
+  "webkit": {
+    "plugin": false
+  },
+  "chromium-args": "--disable-web-security --allow-file-access-from-files",
+  "node-remote": "<local>",
+  "scripts": {
+    "start": "nw .",
+    "build:win": "nwbuild -p win64 -o dist/ .",
+    "build:mac": "nwbuild -p osx64 -o dist/ .",
+    "build:linux": "nwbuild -p linux64 -o dist/ .",
+    "build:all": "nwbuild -p win64,osx64,linux64 -o dist/ ."
+  },
+  "devDependencies": {
+    "nw": "^0.92.0",
+    "nw-builder": "^4.0.0"
+  },
+  "author": "Ali Eren Tabak",
+  "license": "MIT",
+  "keywords": [
+    "activity-planner",
+    "wedding-planner",
+    "offline-first",
+    "nwjs",
+    "desktop-app"
+  ]
+}

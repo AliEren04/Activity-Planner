@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Activity Planner</title>
+    <link rel="icon" href="./assets/logo.png" />
+    <!-- LOCAL Bootstrap CSS -->
+    <link rel="stylesheet" href="./libs/bootstrap.min.css" />
+    <!-- LOCAL Bootstrap Icons -->
+    <link rel="stylesheet" href="./libs/bootstrap-icons.min.css"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar bg-info">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">
+            <img
+              src="./assets/logo.png"
+              alt="Site Logo"
+              width="30"
+              height="24"
+            />
+            <span data-i18n="app_title">Activity Planner</span>
+          </a>
+        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button class="btn btn-dark m-2" id="translate-btn">
+              <i class="bi bi-translate"></i>
+              <span data-i18n="translate_btn">Türkçe'ye Çevir</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main-content">
+      <div class="container py-5">
+        <!-- Event Type Selector -->
+        <div class="form-container mb-4 fade-in">
+          <h3 class="mb-3" data-i18n="select_event_type">Select Event Type</h3>
+          <select class="form-select form-select-lg" id="eventTypeSelector">
+            <option value="" data-i18n="choose_event">-- Choose Event Type --</option>
+            <option value="wedding" data-i18n="event_wedding">Wedding</option>
+            <option value="funeral" data-i18n="event_funeral">Funeral</option>
+            <option value="breakfast" data-i18n="event_breakfast">Breakfast</option>
+            <option value="musical" data-i18n="event_musical">Musical Event</option>
+          </select>
+        </div>
+
+        <!-- Dynamic Form Container -->
+        <div class="form-container slide-down" id="formContainer" style="display: none;">
+          <h2 class="mb-4" id="formTitle"></h2>
+          <form class="row g-4" id="eventForm">
+            <!-- Form fields will be dynamically inserted here -->
+            <div id="formFields"></div>
+            
+            <div class="col-12 mt-4">
+              <button type="submit" class="btn btn-success btn-lg" id="formSubmitBtn">
+                <i class="bi bi-plus-circle"></i>
+                <span data-i18n="add_event">Add Event</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="container mb-4">
+      <div class="form-container">
+        <h4 class="mb-3" data-i18n="filter_events">Filter Events</h4>
+        <select class="form-select" id="filterSelector">
+          <option value="all" data-i18n="filter_all">All Events</option>
+          <option value="wedding" data-i18n="event_wedding">Wedding</option>
+          <option value="funeral" data-i18n="event_funeral">Funeral</option>
+          <option value="breakfast" data-i18n="event_breakfast">Breakfast</option>
+          <option value="musical" data-i18n="event_musical">Musical Event</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Events List -->
+    <div class="list-container container-fluid text-center mt-auto mb-4">
+      <div class="single-row-box">
+        <ul class="list-group list-group-horizontal-md" id="listHeader">
+          <!-- Dynamic headers will be inserted here -->
+        </ul>
+      </div>
+
+      <div class="single-row-box">
+        <ul class="list-group" id="eventList"></ul>
+      </div>
+    </div>
+
+    <footer class="footer card">
+      <div class="card-header text-center">
+        <i class="bi bi-c-circle-fill"></i>
+        Ali Eren Tabak 2026 <span data-i18n="footer_rights">All Rights Reserved</span>.
+      </div>
+    </footer>
+
+    <!-- LOCAL Bootstrap JS -->
+    <script src="./libs/bootstrap.bundle.min.js"></script>
+    <!-- LOCAL Dexie -->
+    <script src="./libs/dexie.min.js"></script>
+    <!-- LOCAL DOMPurify -->
+    <script src="./libs/purify.min.js"></script>
+    <!-- Application Modules -->
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
